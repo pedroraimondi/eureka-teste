@@ -1,0 +1,116 @@
+.pokeball{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(
+        50deg,
+        rgb(255, 255, 255),
+        rgb(235, 235, 235)
+  );
+  text-align: center;
+}
+
+body{
+    overflow: hidden;
+}
+
+.content{
+    position: fixed;
+    font-size: 32px;
+}
+
+.red{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background-color: red;
+    border-bottom: 40px solid rgb(26, 26, 26);
+
+    z-index: 10;
+}
+
+.white{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    border-top: 40px solid rgb(26, 26, 26);
+    z-index: 10;
+}
+
+.divisor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 11;
+}
+
+.divisor button {
+    outline: none;
+    background: none;
+    border: 1px solid rgb(26, 26, 26);
+    border-radius: 50%;
+
+    cursor: pointer;
+    z-index: 11;
+}
+
+.ball{
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    background-color: #fff;
+    border: 40px solid rgb(26, 26, 26);
+    border-radius: 50%;
+    z-index: 11;
+}
+
+.openBall{
+    transform: translate(0, -40vh);
+    transition: 2s;
+}
+
+.openRed{
+    top: -40vh;
+    transition: 2s;
+}
+
+.openWhite{
+    transition: 2s;
+    bottom: -40vh;
+}
+
+
+@media (max-width: 500px){
+    .content{
+        font-size: 16px;
+    }
+
+    .red{
+        border-bottom: 20px solid rgb(26, 26, 26);
+    }
+
+    .white{
+        border-top: 20px solid rgb(26, 26, 26);
+    }
+
+    .ball{
+        width: 180px;
+        height: 180px;
+        border: 20px solid rgb(26, 26, 26);
+        
+        font-size: 25px;
+    }
+}
