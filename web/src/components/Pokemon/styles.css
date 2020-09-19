@@ -1,0 +1,12 @@
+.pokeInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 300px;
+
+    border: 1px solid black;
+
+    margin: 15px;
+}
