@@ -1,0 +1,16 @@
+#page-list {
+    overflow: auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px;
+    align-items: center;
+    width: 100vw;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(4fr);
+}
