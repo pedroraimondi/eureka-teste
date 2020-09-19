@@ -40,7 +40,7 @@ Pedro Luis Raimondi Ferreira da Silva – [LinkedIn](https://www.linkedin.com/in
 
 ## Contributing
 
-1. Faça o _fork_ do projeto (<https://github.com/pedroraimondi/NLW>)
+1. Faça o _fork_ do projeto (<https://github.com/pedroraimondi/eureka-teste>)
 2. Crie uma _branch_ para sua modificação (`git checkout -b feature/example`)
 3. Faça o _commit_ (`git commit -am 'Add some example'`)
 4. _Push_ (`git push origin feature/example`)
