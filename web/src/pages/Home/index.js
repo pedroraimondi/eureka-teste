@@ -5,6 +5,8 @@ import PokeBola from '../../components/PokeBola';
 import pokedexImg from '../../images/pokedex.png';
 
 function Home() {
+  document.body.classList.add("overflow");
+
   return (
     <PokeBola>
       <h1 className="title">Parabéns! <br />Você encontrou o manual pokemon</h1>
