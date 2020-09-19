@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 
 import './styles.css';
 
@@ -8,6 +8,10 @@ function PokeBola({children}) {
     const handleStatusBall = () => {
         setStatusBall(!statusBall);
     };
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <div id="pokeball-component">
