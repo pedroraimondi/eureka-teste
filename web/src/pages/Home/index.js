@@ -7,7 +7,7 @@ import pokedexImg from '../../images/pokedex.png';
 function Home() {
   return (
     <PokeBola>
-      <h1>Parabéns! <br />Você encontrou o manual pokemon</h1><p>clique no pokedex</p>
+      <h1 className="title">Parabéns! <br />Você encontrou o manual pokemon</h1>
         <Link to="/listpokemons" className="container">
           <img 
             src={pokedexImg} 
@@ -15,6 +15,7 @@ function Home() {
             className="pokedex"
           />
         </Link>
+        <p>clique no pokedex</p>
     </PokeBola>
   );
 }

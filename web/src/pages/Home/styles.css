@@ -1,7 +1,16 @@
 .pokedex{
-    margin-top: 100px;
     height: 150px;
     position: absolute;
+    margin-bottom: 25px;
+}
+
+.pokedex:hover{
+    filter: contrast(1.5);
+    transition: .5s;
+}
+
+.title{
+    margin-bottom: 25px;
 }
 
 .container{
@@ -10,5 +19,4 @@
     justify-content: center;
 
     height: 150px;
-
 }
