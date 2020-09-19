@@ -1,5 +1,5 @@
 #page-list {
-    background-color: #ce0d0d;
+    background: linear-gradient(315deg, #aa0d0d, #d10505);
 }
 
 .header{
@@ -15,7 +15,12 @@
 
     border-bottom: 20px solid rgb(26, 26, 26);
 
-    z-index: 2;
+    z-index: 3;
+}
+
+.header,
+.header button{
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.493);
 }
 
 .header h1{
@@ -49,6 +54,99 @@
 
 .header button.voltar:hover{
     background-color: rgb(252, 255, 53);
+    animation: rotate .5s ease;
+}
+
+
+.prev::after{
+    content: '⏪';
+    font-size: 62px;
+    cursor: pointer;
+}
+
+.next::after{
+    content: '⏩';
+    font-size: 62px;
+    cursor: pointer;
+}
+
+.controler{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    justify-content: space-between;
+    width: 100%;
+    top: 200px;
+    padding: 0 15px;
+    z-index: 1;
+}
+
+.controler button{
+    outline: none;
+    background: none;
+    border: none;
+}
+
+.prev:active,
+.next:active{
+    animation: click .2s linear;
+}
+
+.noPrev::after{
+    display: none;
+}
+.noNext{
+    display: none;
+}
+
+.controler-phone{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+
+    z-index: 4;
+}
+
+.controler-phone .prev,
+.controler-phone .next{
+    border: 2px solid #fff;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+.controler-phone .prev::after,
+.controler-phone .next::after{
+    font-size: 32px;
+}
+
+@media (min-width: 1150px){
+    .controler-phone{
+        display: none;
+    }
+}
+@media (max-width: 1150px){
+    .controler{
+        display: none;
+    }
+}
+
+@keyframes click{
+    0%{transform: scale(1)}
+    50%{transform: scale(0.8)}
+    100%{transform: scale(1)}
+}
+
+@keyframes rotate{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(15deg);}
+    50%{transform: rotate(-20deg);}
+    75%{transform: rotate(0deg);}
 }
 
 .list{
@@ -57,6 +155,8 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+
+    z-index: 2;
 }
 
 
