@@ -34,12 +34,9 @@ function PokemonsList() {
                 key={pokemon.name}
                 name={pokemon.name}
                 url={pokemon.url}
-                // pokemon={pokemon.sprites.front_default}
               />
-              
           })}
         </div>
-        Next Page
       </div>
     </body>
   );
