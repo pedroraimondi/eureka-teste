@@ -13,7 +13,7 @@
 }
 
 body{
-    overflow: hidden !important;
+    overflow: hidden;
 }
 
 .content{
@@ -75,6 +75,12 @@ body{
     border: 40px solid rgb(26, 26, 26);
     border-radius: 50%;
     z-index: 11;
+
+    transition: .5s;
+}
+
+.ball:hover{
+    background-color: rgb(252, 255, 53);
 }
 
 .openBall{
@@ -92,6 +98,27 @@ body{
     bottom: -40vh;
 }
 
+@media (max-height: 680px){
+    .content{
+        font-size: 16px;
+    }
+
+    .red{
+        border-bottom: 20px solid rgb(26, 26, 26);
+    }
+
+    .white{
+        border-top: 20px solid rgb(26, 26, 26);
+    }
+
+    .ball{
+        width: 180px;
+        height: 180px;
+        border: 20px solid rgb(26, 26, 26);
+        
+        font-size: 25px;
+    }
+}
 
 @media (max-width: 500px){
     .content{
@@ -112,5 +139,27 @@ body{
         border: 20px solid rgb(26, 26, 26);
         
         font-size: 25px;
+    }
+}
+
+@media (max-width: 380px){
+    .content{
+        font-size: 16px;
+    }
+
+    .red{
+        border-bottom: 10px solid rgb(26, 26, 26);
+    }
+
+    .white{
+        border-top: 10px solid rgb(26, 26, 26);
+    }
+
+    .ball{
+        width: 120px;
+        height: 120px;
+        border: 10px solid rgb(26, 26, 26);
+        
+        font-size: 16px;
     }
 }
