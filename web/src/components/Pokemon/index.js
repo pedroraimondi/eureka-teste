@@ -3,7 +3,7 @@ import capitalizeFistLetter from '../../util/capitalizeFistLetter';
 
 import './styles.css'
 
-function Pokemon({name, url, pokemon}) {
+function Pokemon({name, url}) {
     const pokemonIndex = url.split("/")[url.split("/").length -2];
     const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true;`
 
