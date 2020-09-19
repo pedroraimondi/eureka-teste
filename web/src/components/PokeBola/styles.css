@@ -12,13 +12,10 @@
   text-align: center;
 }
 
-body{
-    overflow: hidden;
-}
-
 .content{
+    margin-top: 100px;
     position: fixed;
-    font-size: 32px;
+    font-size: 16px;
 }
 
 .red{
@@ -53,7 +50,7 @@ body{
 .divisor button {
     outline: none;
     background: none;
-    border: 1px solid rgb(26, 26, 26);
+    border: none;
     border-radius: 50%;
 
     cursor: pointer;
@@ -100,7 +97,7 @@ body{
 
 @media (max-height: 680px){
     .content{
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .red{
@@ -121,9 +118,6 @@ body{
 }
 
 @media (max-width: 500px){
-    .content{
-        font-size: 16px;
-    }
 
     .red{
         border-bottom: 20px solid rgb(26, 26, 26);
@@ -144,7 +138,7 @@ body{
 
 @media (max-width: 380px){
     .content{
-        font-size: 16px;
+        font-size: 9px;
     }
 
     .red{
