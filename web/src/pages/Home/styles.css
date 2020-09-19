@@ -1,5 +1,5 @@
 .pokedex{
-    height: 150px;
+    height: min(30vw, 150px);
     position: absolute;
     margin-bottom: 25px;
 }
