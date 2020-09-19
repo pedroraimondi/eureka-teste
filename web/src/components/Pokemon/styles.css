@@ -19,10 +19,13 @@
     margin: 15px;
 
     cursor: pointer;
+
+    z-index: 2;
 }
 
 .pokemon:hover{
-    animation: hoverPokemon .4s ease;
+    transform: translate(0, -10px) scale(1.009);
+    transition: .5s;
 }
 
 @keyframes hoverPokemon{
