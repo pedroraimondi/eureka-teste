@@ -3,42 +3,39 @@ import { Link } from 'react-router-dom';
 import Pokemon from '../../components/Pokemon';
 import api from '../../services/api';
 import './styles.css';
-// import { Container } from './styles';
 
 function PokemonsList() {
   
   const [pokemons, setPokemons] = useState([]);
   
   useEffect(() => {
-    api.get('/pokemon?limit=100')
+    api.get('/pokemon?limit=20')
       .then((response) => setPokemons(response.data.results))
       .catch((err) => {
-        console.error("ops! ocorreu um erro " + err);
+        console.error("Ops! Pcorreu um erro " + err);
       });
   }, []);
 
+  document.body.classList.remove("overflow");
 
   return (
-    <body className="overflow">
       <div id="page-list">
         <div className="header">
           <h1>Pokemons</h1>
           <Link to="/" >
-            <button>VOLTAR</button>
+            <button className="voltar">VOLTAR</button>
           </Link>
         </div>
         <div className="list">
           {pokemons.map(pokemon => {
-              console.log(pokemon)
-              return <Pokemon 
-                key={pokemon.name}
-                name={pokemon.name}
-                url={pokemon.url}
-              />
-          })}
+            return <Pokemon 
+                      key={pokemon.name}
+                      name={pokemon.name}
+                      url={pokemon.url}
+                    />
+                  })}
         </div>
       </div>
-    </body>
   );
 }
 
