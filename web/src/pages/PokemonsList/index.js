@@ -19,23 +19,29 @@ function PokemonsList() {
 
 
   return (
-    <div id="page-list">
-      <div className="header">
-        <h1>Pokemons</h1>
-        <Link to="/" >
-          Voltar
-        </Link>
+    <body className="overflow">
+      <div id="page-list">
+        <div className="header">
+          <h1>Pokemons</h1>
+          <Link to="/" >
+            <button>VOLTAR</button>
+          </Link>
+        </div>
+        <div className="list">
+          {pokemons.map(pokemon => {
+              console.log(pokemon)
+              return <Pokemon 
+                key={pokemon.name}
+                name={pokemon.name}
+                url={pokemon.url}
+                // pokemon={pokemon.sprites.front_default}
+              />
+              
+          })}
+        </div>
+        Next Page
       </div>
-      <div className="list">
-        {pokemons.map(pokemon => {
-            return <Pokemon 
-              key={pokemon.name}
-              name={pokemon.name}
-              url={pokemon.url}
-            />
-        })}
-      </div>
-    </div>
+    </body>
   );
 }
 
