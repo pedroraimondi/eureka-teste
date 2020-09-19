@@ -6,12 +6,11 @@ function PokeBola({children}) {
     const [statusBall, setStatusBall] = useState(false);
 
     const handleStatusBall = () => {
-        console.log(statusBall)
         setStatusBall(!statusBall);
     };
 
     return (
-        <div className="pokeball">
+        <div id="pokeball-component">
             <div className={statusBall ? "red" : "red openRed" }></div>
             <div className={statusBall ? "divisor" : "divisor openBall"}>
                 <button onClick={handleStatusBall}><div className="ball">Clique <br />em mim</div></button>
