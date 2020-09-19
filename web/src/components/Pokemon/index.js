@@ -4,8 +4,8 @@ import capitalizeFistLetter from '../../util/capitalizeFistLetter';
 import './styles.css'
 
 function Pokemon({name, url}) {
-    const pokemonIndex = url.split("/")[url.split("/").length -2];
-    const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true;`
+    const pokemonIndex = url.split("/")[url.split("/").length -2] === '893' ? console.log("CHEGOU") : url.split("/")[url.split("/").length -2]; 
+    const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonIndex}.png`
 
     return (
         <div className="pokemon">
