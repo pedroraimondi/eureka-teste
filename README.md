@@ -29,7 +29,7 @@ Em instantes o terminal irá te informar onde você pode visualizar a aplicaçã
 >You can now view web in the browser.
 >
 >  Local:            http://localhost:3000
->  On Your Network:  http://192.168.0.20:3000
+>  On Your Network:  http://192.168.0.0:3000
 >
 
 ## Meta
