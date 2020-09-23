@@ -10,13 +10,13 @@ function PokemonsList() {
   const [offset, setOffset] = useState(0);
 
   function handleOffsetPrev(){
-    const prevOffset = offset == 0 ? 0 : offset-10;
+    const prevOffset = offset === 0 ? 0 : offset-10;
     setOffset(prevOffset);
     api.get(`/pokemon?limit=10&offset=${prevOffset}`).then((response) => setPokemons(response.data.results));
   }
 
   function handleOffsetNext(){
-      const nextOffset = offset == 790 ? 790 : offset+10;
+      const nextOffset = offset === 790 ? 790 : offset+10;
       setOffset(nextOffset);
       api.get(`/pokemon?limit=10&offset=${nextOffset}`).then((response) => setPokemons(response.data.results));
     }
@@ -25,9 +25,9 @@ function PokemonsList() {
     api.get(`/pokemon?limit=10&offset=${offset}`)
       .then((response) => setPokemons(response.data.results))
       .catch((err) => {
-        console.error("Ops! Pcorreu um erro " + err);
+        console.error("Ops! Ocorreu um erro " + err);
       });
-  }, []);
+  }, [offset]);
 
   document.body.classList.remove("overflow");
 
@@ -40,7 +40,7 @@ function PokemonsList() {
           </Link>
         </div>
         <div className="list">
-          {pokemons.map(pokemon => {
+          {pokemons && pokemons.map(pokemon => {
             return <Pokemon 
                       key={pokemon.name}
                       name={pokemon.name}
@@ -49,12 +49,12 @@ function PokemonsList() {
             })}
         </div>
         <div className="controler">
-          <button onClick={handleOffsetPrev}><div className={offset == 0 ? "noPrev" : "prev"}></div></button>
-          <button onClick={handleOffsetNext}><div className={offset == 1050 ? "noNext" : "next"}></div></button>
+          <button onClick={handleOffsetPrev}><div className={offset === 0 ? "noPrev" : "prev"}></div></button>
+          <button onClick={handleOffsetNext}><div className={offset === 1050 ? "noNext" : "next"}></div></button>
         </div>
         <div className="controler-phone">
-          <button onClick={handleOffsetPrev}><div className={offset == 0 ? "noPrev" : "prev"}></div></button>
-          <button onClick={handleOffsetNext}><div className={offset == 1050 ? "noNext" : "next"}></div></button>
+          <button onClick={handleOffsetPrev}><div className={offset === 0 ? "noPrev" : "prev"}></div></button>
+          <button onClick={handleOffsetNext}><div className={offset === 1050 ? "noNext" : "next"}></div></button>
         </div>
       </div>
   );
