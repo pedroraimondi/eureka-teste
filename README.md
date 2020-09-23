@@ -32,6 +32,14 @@ Em instantes o terminal irá te informar onde você pode visualizar a aplicaçã
 >  On Your Network:  http://192.168.0.0:3000
 >
 
+## List of New Features
+
+- [ ] Pesquisa de pokemons
+- [ ] Melhorar a aparência dos Cards
+- [ ] Criar modal dos cards
+- [ ] Sistema para identificar tipo de pokemons
+- [ ] Sistema de pesquisa de tipo de pokemon bons contra/fraco contra
+
 ## Meta
 
 Pedro Luis Raimondi Ferreira da Silva – [LinkedIn](https://www.linkedin.com/in/pedro-r-517091106/) – pedroraimondi6@gmail.com
