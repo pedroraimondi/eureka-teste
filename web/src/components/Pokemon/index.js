@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import capitalizeFistLetter from '../../util/capitalizeFistLetter';
 
-import './styles.css'
+import './styles.css';
 
 function Pokemon({name, url}) {
     const pokemonIndex = url.split("/")[url.split("/").length -2] === '893' ? console.log("CHEGOU") : url.split("/")[url.split("/").length -2]; 
@@ -9,7 +9,7 @@ function Pokemon({name, url}) {
 
     return (
         <div className="pokemon">
-            <img src={imageUrl} />
+            <img src={imageUrl} alt={'Image of ' + name}/>
             <div className="pokemonInfo">
                 <h3>#{pokemonIndex}</h3>
                 <h2>{capitalizeFistLetter(name)}</h2>
@@ -18,4 +18,4 @@ function Pokemon({name, url}) {
     );
 }
 
-export default Pokemon;
+export default Pokemon;  
