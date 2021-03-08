@@ -15,7 +15,7 @@ O front-end foi desenvovlido utilizando ReactJs, utilizando as melhores prática
 Para visualizar como esta o funcionamento na web, forke este repositório, entre na pasta web e rode o comando: 
 
 ```sh
-npm start
+npm run start
 ```
 ou caso tenha algum outro gerenciador de pacotes, o comando respectivo.
 
